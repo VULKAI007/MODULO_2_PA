@@ -1,1 +1,15 @@
-# MODULO_2
+# MODULO_2__PA
+
+##  COMANDOS BÁSICOS
+
+1) TRAZENDO POSSÍVEIS MUDANÇAS DO GITHUB:
+git pull
+
+2) ADICIONAR ARQUIVOS PARA COMMIT:
+git add .
+
+3) CRIAR VERSIONAMENTO (commit):
+git commit -m"Feat: o que foi feito"
+
+4) ENVIAR ALTERAÇÕES PARA O GITHUB:
+git pull
