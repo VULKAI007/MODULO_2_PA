@@ -13,3 +13,8 @@ git commit -m"Feat: o que foi feito"
 
 4) ENVIAR ALTERAÇÕES PARA O GITHUB:
 git pull
+
+## BRANCH
+
+MOSTRAR BRANCHES NO COMPUTADOR?:
+git branch
