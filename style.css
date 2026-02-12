@@ -31,9 +31,86 @@ p {
     margin: 0px 10px 0px 10px;
 }
 
-h2 {
-    color: rgb(203, 206, 223);
+hr {
+    max-width: 50%;
+    margin: 0 auto;
+    
+}
+
+button {
+    display: block;
+    height: auto;
+    margin: 5px auto;
+    padding: 5px 20px;
+    text-align: none;
+
+    font-size: 16px;
+    background-color: rgb(215, 216, 224);
+    color: rgb(28, 36, 105);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; 
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    color: teal;
+
+}
+
+/* ESTILIZANDO A PAGINA 2 */
+
+
+
+h3 {
+    color: rgb(255, 255, 255);
     font-size: 30px;
-    text-align: left;
-    margin: 30px 0 20px 10px;
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+ol {
+    color: black;
+    margin: 10px 20px 10px 20px;
+    border-radius: 10px;
+    justify-items: center;
+    
+    
+
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    
+    
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[ type="text"] {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
