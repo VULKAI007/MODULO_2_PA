@@ -1,0 +1,105 @@
+/* RESET BÁSICO */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(assets/background_4.jpg);
+    color: black;
+    line-height: 1.6;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+/* CONFIGURAÇÕES DO CABEÇALHO */
+.TOPO-SITE {
+    background-color: rgb(2, 2, 2);
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centraliza o logo horizontalmente */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra leve no fundo */
+
+}
+
+.LOGO {
+    
+    width: 120px;     /* Tamanho da imagem */
+    height: auto;     /* Mantém a proporção */
+    transition: 0.3s; /* Efeito suave para interações */
+}
+
+.LOGO:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* 3. Estilizando o Conteúdo Principal */
+.CONTEUDO-PRINCIPAL {
+    max-width: 800px;  /* Limita a largura do texto para não ficar esticado */
+    margin: 40px auto; /* Centraliza o bloco de conteúdo na tela */
+    padding: 20px;
+    
+    /* O SEGREDO DA TRANSPARÊNCIA: */
+    background: rgba(255, 255, 255, 0.75); /* Branco com 75% de opacidade */
+    backdrop-filter: blur(15px);          /* Desfoca o fundo atrás da caixa */
+    
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* CONTAINER DOS BOTOES */
+.CONTAINER-BOTOES {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* BOTÃO NEUTRO E MODERNO */
+.NAVEGAR {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #333; /* Cinza grafite escuro */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.NAVEGAR:hover {
+    background-color: #000; /* Fica preto total ao passar o mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* 4. Estilizando o Rodapé */
+.RODAPE {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: white;
+}
+
+
