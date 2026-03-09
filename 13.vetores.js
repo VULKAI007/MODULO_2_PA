@@ -17,12 +17,20 @@ console.log("\nADICIONANDO MAIS UM ELEMENTO: ")
 listaDeNomes.push("CABRAL")
 console.log(listaDeNomes)
 
-console.log("\nREMOVENDO UM ELEMENTO: ")
 // A PARTIR DO ÍNDICE 2, REMOVER APENAS 1 ELEMENTO.
+console.log("\nREMOVENDO UM ELEMENTO: ")
 listaDeNomes.splice(2,1)
 console.log(listaDeNomes)
 
 // SUA VEZ, REMOVA APENAS O SEGUNDO ELEMENTO DA LISTA
 console.log("\nREMEOVENDO OUTRO (TESTE): ")
 listaDeNomes.splice(1,1)
+console.log(listaDeNomes)
+
+console.log("\nREMOVENDO APENAS O ÚLTIMO ELEMENTO: ")
+listaDeNomes.pop()
+console.log(listaDeNomes)
+
+console.log("\nREMOVENDO APENAS O PRIMEIRO ELEMENTO: ")
+listaDeNomes.shift()
 console.log(listaDeNomes)
