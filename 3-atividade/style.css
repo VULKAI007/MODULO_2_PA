@@ -1,0 +1,130 @@
+/* --- Paleta de Cores Acadêmica --- */
+:root {
+    --primary: #1B365D;    /* Azul Marinho (Credibilidade e Foco) */
+    --accent: #0073e6;     /* Azul Vivo (Destaque para o botão) */
+    --bg-page: #F4F7F6;    /* Cinza/Azulado muito claro (Fundo da tela) */
+    --bg-card: #FFFFFF;    /* Branco (Fundo da calculadora) */
+    --text-main: #333333;  /* Grafite escuro (Melhor para leitura) */
+    --border: #E0E5EC;     /* Cinza claro para linhas sutis */
+    --radius: 8px;         /* Bordas levemente arredondadas */
+}
+
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz o rodapé ficar sempre no fim da página */
+}
+
+/* --- Cabeçalho Institucional --- */
+.TOPO {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.TOPO h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px; /* Espaçamento elegante entre as letras */
+}
+
+/* --- Formulário Principal --- */
+main {
+    background-color: var(--bg-card);
+    width: 90%;
+    max-width: 450px;
+    margin: 3rem auto; /* Centraliza na tela */
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Sombra bem suave */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os elementos */
+}
+
+/* Textos acima dos campos */
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: -5px;
+}
+
+/* Campos de digitar a nota */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+}
+
+/* Efeito ao clicar no campo de nota */
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(0, 115, 230, 0.15);
+}
+
+/* --- Botão de Ação --- */
+button#btnCalcular {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+button#btnCalcular:hover {
+    background-color: #005bb5; /* Escurece o botão ao passar o mouse */
+}
+
+/* --- Área de Resultados --- */
+.RESULTADOS {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.RESULTADOS p {
+    background-color: var(--bg-page);
+    padding: 15px;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary);
+}
+
+/* --- Rodapé --- */
+.RODAPE {
+    margin-top: auto; /* Empurra o rodapé pro fundo */
+    background-color: var(--primary);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+}

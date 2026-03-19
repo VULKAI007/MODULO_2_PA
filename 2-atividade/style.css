@@ -1,100 +1,145 @@
-/* Reset básico */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+/* --- Configurações Globais (Reset e Novas Cores de IA) --- */
+:root {
+    --primary-color: #3b5998; /* Azul Escuro dos contornos do logo */
+    --accent-color: #a0c4ff;  /* Azul Claro do cérebro do logo */
+    --text-color: #1a1a1a;    /* Quase preto para melhor contraste */
+    --bg-color: #e6e6e6;      /* Cinza Claro do círculo interno do logo */
+    --white: #ffffff;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Fundo da página */
-body{
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Card principal */
-main{
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    width:350px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    text-align:center;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Cabeçalho */
-header{
-    position:absolute;
-    top:20px;
-    text-align:center;
+/* --- Header --- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-header h1{
-    color:white;
-    margin-top:10px;
+.logo {
+    width: 80px;  /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Logo */
-.logo{
-    width:70px;
+h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color); /* Usando o azul escuro tecnológico no título */
+    font-weight: 600;
 }
 
-/* Labels */
-label{
-    display:block;
-    margin-top:15px;
-    font-weight:bold;
-    color:#333;
+/* --- Corpo Principal (A Calculadora) --- */
+main {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Inputs */
-input{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    outline:none;
-    transition:0.3s;
+/* Labels e Inputs */
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: -5px;
 }
 
-input:focus{
-    border-color:#4facfe;
-    box-shadow:0 0 5px rgba(79,172,254,0.5);
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-/* Botão */
-button{
-    margin-top:20px;
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:linear-gradient(135deg,#4facfe,#00c6ff);
-    color:white;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+/* Efeito quando clica no campo */
+input[type="number"]:focus {
+    border-color: var(--accent-color); /* Destaque com o azul claro da IA */
+    outline: none;
 }
 
-button:hover{
-    transform:scale(1.05);
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+/* --- O Botão --- */
+button#btnCalcular {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color); /* Fundo azul escuro */
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
 }
 
-/* Resultados */
-.resultados{
-    margin-top:20px;
-    text-align:left;
+/* Efeito ao passar o mouse */
+button#btnCalcular:hover {
+    background-color: #2b4170; /* Um azul escuro ainda mais profundo */
 }
 
-.resultados p{
-    background:#f5f7fa;
-    padding:8px;
-    border-radius:6px;
-    margin-top:6px;
+/* Efeito ao clicar */
+button#btnCalcular:active {
+    transform: scale(0.98);
+}
+
+/* --- Área de Resultados --- */
+.resultados {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resultados p {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 4px solid transparent;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para quando o resultado aparece */
+.resultados p:not(:empty) {
+    border-left-color: var(--accent-color); /* Destaque com o azul claro da IA à esquerda */
+    background-color: #ebf3ff; /* Fundo azul claro bem sutil */
+    font-weight: 500;
+}
+
+/* --- Rodapé --- */
+.RODAPE {
+    margin-top: auto; /* Empurra o rodapé pro fundo */
+    background-color: var(--primary);
+    color: rgba(28, 26, 160, 0.7);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
 }
