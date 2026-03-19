@@ -1,0 +1,90 @@
+/* --- Importando uma fonte moderna do Google (Inter) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* --- Paleta Jovem e Dark Mode --- */
+:root {
+    --bg-dark: #0f172a;       /* Azul muito escuro (Fundo do site) */
+    --card-bg: #1e293b;       /* Azul escuro acinzentado (Fundo do card) */
+    --text-light: #f8fafc;    /* Branco "suave" para textos */
+    --text-muted: #94a3b8;    /* Cinza azulado para detalhes */
+    --input-bg: #334155;      /* Fundo do campo de digitar */
+    --gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899); /* Degradê roxo/rosa */
+    --radius-app: 16px;       /* Bordas bem arredondadas, estilo app de celular */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* --- Cabeçalho --- */
+.TOPO {
+    width: 100%;
+    padding: 2.5rem 1rem 1rem;
+    text-align: center;
+}
+
+.TOPO .logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Se a logo for quadrada, deixa redondinha */
+}
+
+.TOPO h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    /* Efeito de texto com o degradê vibrante */
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+/* --- O Card Principal (A Calculadora) --- */
+main {
+    background-color: var(--card-bg);
+    width: 90%;
+    max-width: 380px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--radius-app);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra difusa e moderna */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: -10px; /* Aproxima do input */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--input-bg);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar no campo */
+input[type="number"]:focus {
+    outline: none;}
