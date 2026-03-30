@@ -1,0 +1,59 @@
+/* info-curso.css */
+
+.info-curso {
+  background-color: #000022; /* Fundo azul bem escuro, lembrando telas de loading de RPGs */
+  border: 4px dashed #00ffff; /* Borda tracejada em Ciano Neon */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), inset 0 0 15px rgba(0, 255, 255, 0.2); /* Brilho neon interno e externo */
+  
+  padding: 30px;
+  max-width: 450px;
+  margin: 40px auto;
+  
+  /* Fonte Pixel Art (lembre-se da tag <link> no seu index.html) */
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  
+  /* Efeito de grade/scanline de monitor de tubo (CRT) */
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.05) 3px,
+    rgba(0, 255, 255, 0.05) 4px
+  );
+}
+
+/* Título estilo "MISSION LOG" em Laranja Arcade */
+.info-curso h2 {
+  color: #ffaa00; 
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 25px;
+  border-bottom: 4px solid #ffaa00; /* Linha grossa separando o título */
+  padding-bottom: 10px;
+  text-shadow: 2px 2px 0px #884400; /* Sombra dura de 8-bits */
+}
+
+/* Estilo dos dados da missão (curso) */
+.info-curso p {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 20px 0;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Efeito especial: Adicionando um "cursor piscante" no último parágrafo
+   para dar a sensação de que o terminal acabou de imprimir o texto! */
+.info-curso p:last-child::after {
+  content: ' _';
+  color: #00ff00; /* Verde terminal */
+  animation: blink-cursor 1s step-end infinite;
+}
+
+/* Animação do cursor piscante */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

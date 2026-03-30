@@ -1,0 +1,56 @@
+/* info-aluno.css */
+
+.info-aluno {
+  background-color: #000000; /* Fundo preto total */
+  border: 4px solid #ffffff; /* Borda branca grossa */
+  
+  /* Efeito de borda dupla estilo arcade clássico */
+  outline: 4px solid #000000;
+  box-shadow: 0 0 0 8px #ffffff, 0 0 20px #ffffff; /* Brilho branco na borda */
+  
+  padding: 25px;
+  max-width: 400px;
+  margin: 50px auto;
+  
+  /* Fonte Pixel Art (requer o link do Google Fonts mencionado acima) */
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  
+  /* Efeito opcional de entrelaçamento de TV antiga (Scanlines) */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 4px;
+}
+
+/* Título estilo "PLAYER STATS" em Amarelo Neon */
+.info-aluno h2 {
+  color: #fffb00; 
+  font-size: 16px; /* Fontes pixel ficam melhores em tamanhos múltiplos de 8 */
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 0 #c4c100;
+}
+
+/* Estilo das linhas de dados */
+.info-aluno p {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 15px 0;
+  line-height: 1.6;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between; /* Alinha o rótulo à esquerda e o valor à direita */
+}
+
+/* Destacando o valor da variável (Nome, Idade, Curso) em Ciano Neon */
+.info-aluno p::after {
+  content: ''; /* Isso é técnico, ignore. Estamos estilizando o texto dentro do P */
+}
+
+/* Se você conseguir envolver as variáveis {} em um <span> no HTML, 
+   o efeito abaixo fica perfeito. Ex: Nome: <span>{nome}</span>.
+   Caso não possa mudar o HTML, o CSS acima já resolve mantendo tudo branco. */
+.info-aluno p span {
+  color: #00ffff; /* Ciano Neon para os dados */
+  text-shadow: 2px 2px 0 #00aaaa;
+}
