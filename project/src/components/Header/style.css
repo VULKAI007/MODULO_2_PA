@@ -1,0 +1,52 @@
+/* 1. CONTAINER PRINCIPAL DO CABEÇALHO */
+.header {
+  background-color: #161b22; /* Fundo que combina com o card do formulário */
+  width: 100%;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhamento à esquerda, típico de dashboards */
+  
+  /* Borda inferior e sombra para criar profundidade em relação ao fundo da página */
+  border-bottom: 1px solid #30363d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  
+  /* Mantém o header fixo no topo caso a página tenha rolagem */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura total */
+}
+
+/* 2. ESTILIZAÇÃO DO TÍTULO / LOGO TIPO TEXTO */
+.header div {
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espaço entre o título e o indicador de status (criado abaixo) */
+  user-select: none; /* Impede que o texto seja selecionado por engano, parecendo mais um logo */
+}
+
+/* 3. DETALHE TECNOLÓGICO (Indicador de Status "Online") */
+/* Vamos usar um pseudo-elemento para criar uma "luz" indicadora sem precisar mexer no seu HTML */
+.header div::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #58a6ff; /* O nosso azul tecnológico de destaque */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.8); /* Brilho neon sutil */
+  animation: pulsar 2.5s infinite ease-in-out; /* Animação para dar vida ao sistema */
+}
+
+/* 4. ANIMAÇÃO DE PULSO (Opcional, para imersão) */
+@keyframes pulsar {
+  0% { box-shadow: 0 0 8px rgba(88, 166, 255, 0.4); }
+  50% { box-shadow: 0 0 16px rgba(88, 166, 255, 0.9); }
+  100% { box-shadow: 0 0 8px rgba(88, 166, 255, 0.4); }
+}

@@ -1,0 +1,122 @@
+/* 1. TIPOGRAFIA */
+/* Importando a fonte Inter do Google Fonts para um visual limpo e moderno */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* 2. CONFIGURAÇÃO GLOBAL (Opcional, para centralizar o componente na tela) */
+body {
+  background-color: #0d1117; /* Fundo super escuro e tecnológico */
+  color: #c9d1d9; /* Texto cinza claro para não cansar a vista */
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 3. CONTAINER PRINCIPAL DO FORMULÁRIO */
+.formulario {
+  background-color: #161b22; /* Um tom ligeiramente mais claro que o fundo */
+  border: 1px solid #30363d; /* Borda fina para dar estrutura */
+  border-radius: 8px; /* Cantos levemente arredondados (sóbrio) */
+  padding: 32px;
+  width: 100%;
+  max-width: 450px; /* Mantém o formulário compacto */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(88, 166, 255, 0.05); /* Brilho azul muito sutil */
+}
+
+/* 4. TÍTULOS */
+.formulario h2 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* 5. ESTRUTURA DO FORMULÁRIO */
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espaçamento uniforme entre os campos */
+}
+
+/* 6. CAMPOS DE ENTRADA (INPUTS) */
+.formulario input {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #e6edf3;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito tecnológico ao clicar no input (Focus) */
+.formulario input:focus {
+  border-color: #58a6ff; /* Azul tecnológico vivo */
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15); /* "Glow" ao redor do campo */
+}
+
+/* 7. BOTÃO DE AÇÃO */
+.formulario button {
+  background-color: #1f6feb; /* Cor primária de destaque */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Interação com o botão */
+.formulario button:hover {
+  background-color: #388bfd; /* Fica mais claro ao passar o mouse */
+}
+
+.formulario button:active {
+  transform: scale(0.98); /* Efeito de "clique" afundando levemente */
+}
+
+/* 8. LINHA DIVISÓRIA */
+.formulario hr {
+  border: 0;
+  height: 1px;
+  background-color: #30363d;
+  margin: 32px 0;
+}
+
+/* 9. LISTA DE USUÁRIOS */
+.formulario ul {
+  list-style-type: none; /* Remove as bolinhas padrão da lista */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 10. ITENS DA LISTA */
+.formulario li {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Interação ao passar o mouse na lista de usuários */
+.formulario li:hover {
+  border-color: #58a6ff;
+  transform: translateX(4px); /* O item desliza levemente para a direita */
+  border-left: 4px solid #58a6ff; /* Adiciona um marcador visual tecnológico */
+}

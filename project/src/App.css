@@ -1,42 +1,32 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* 1. RESET GLOBAL DE MARGENS (Garante que não haverá bordas brancas na tela) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* 2. ESTRUTURA PRINCIPAL (O Esqueleto do Sistema) */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa exatamente 100% da altura da tela do usuário */
+  background-color: #0d1117; /* Fundo escuro base */
+  color: #c9d1d9;
+  font-family: 'Inter', sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* 3. ÁREA DE CONTEÚDO (Onde vai o nosso formulário) */
+.app main {
+  flex: 1; /* Comando essencial: Faz essa área crescer e empurrar o Footer para baixo! */
+  display: flex;
+  justify-content: center; /* Centraliza o formulário horizontalmente */
+  align-items: center; /* Centraliza o formulário verticalmente */
+  padding: 40px 20px; 
+  
+  /* TOQUE DE DESIGNER: Um padrão de grade (grid) super sutil ao fundo */
+  /* Lembra as telas de blueprint de engenharia de software */
+  background-image: 
+    linear-gradient(rgba(48, 54, 61, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(48, 54, 61, 0.3) 1px, transparent 1px);
+  background-size: 30px 30px; /* Tamanho dos "quadradinhos" da grade */
 }

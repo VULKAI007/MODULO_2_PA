@@ -38,7 +38,7 @@ export default function AdicionarUsuario() {
                 onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <button type='submit'>Adiconar</button>
+                <button type='submit'>Adicionar</button>
             </form>
 
             <hr />
