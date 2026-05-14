@@ -18,3 +18,11 @@ git pull
 
 MOSTRAR BRANCHES NO COMPUTADOR?:
 git branch
+
+##  API
+
+# INSTALAR:
+npm i express sequelize mysql2 cors
+
+# INICIAR PROJETO
+npm init -y
